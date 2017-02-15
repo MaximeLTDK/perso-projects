@@ -15,7 +15,6 @@ def parseString(expr):
     return exprMat
 
 def parseMath(exprList):
-    #TODO letter
     exprMat = []
     (mathElemList, mathTypeList) = ([],[])
     i = 0
@@ -31,13 +30,13 @@ def parseMath(exprList):
             mathTypeList.append("number")
 
         elif exprList[1][i] == "letter":
-            nb = 0
+            word = ""
             j = 0
             while i + j < len(exprList[0]) and exprList[1][i + j] == "letter":
-                nb = nb * 10 + int(exprList[0][i + j])
+                word += exprList[0][i + j]
                 j += 1
             i += j - 1
-            mathElemList.append(str(nb))
+            mathElemList.append(word)
             mathTypeList.append("variable")
 
         elif exprList[1][i] == "operator":
