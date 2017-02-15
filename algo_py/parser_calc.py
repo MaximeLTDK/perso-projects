@@ -141,34 +141,6 @@ def calc(exprList):
     
     return exprList
 
-'''def calc(exprList):
-    newList = [[],[]]
-    while matchList('(', exprList[0]): #check if ( or ) (1/3)
-        calcList = [[],[]]
-        i = 0
-        while i < len(exprList[0]):
-            if exprList[0][i] == '(':
-                j = 1
-                while i + j < len(exprList[0]) and exprList[0][i + j] != ')':
-                    calcList[0].append(exprList[0][i + j])
-                    calcList[1].append(exprList[1][i + j])
-                    j += 1
-                calcList = calc(calcList)
-                newList[0].append(calcList[0][0])
-                newList[1].append(calcList[1][0])
-                i += j
-            else:
-                newList[0].append(exprList[0][i])
-                newList[1].append(exprList[1][i])
-            i += 1
-        exprList = newList
-        print(exprList)
-    while matchList('*', exprList[0]) or matchList('/', exprList[0]): #check if * or / (2/3)
-        exprList = calcProd(exprList)
-    exprList = calcSum(exprList) #only + and -, OK (3/3)
-    return exprList
-    '''
-
 def calcSum(exprList):
     exprMat = []
     (mathElemList, mathTypeList) = ([],[])
