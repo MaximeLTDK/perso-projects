@@ -72,6 +72,9 @@ def printStat(stat): #works with statLetters and instaLetters
     print("\n")
 
 '''
+def mainInput():
+    pass
+    
 def printStat(str_): #overload (broken)
     insta = instaLetters(str_)
     printStat(statLetters(insta))

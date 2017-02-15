@@ -105,7 +105,6 @@ def parseCharType(car):
         return "none"
 
 def calc(exprList):
-    print(exprList)
     while matchList('(', exprList[0]): #check if ( or ) (1/3)
         newList = [[],[]]
         calcList = [[],[]]
@@ -134,7 +133,6 @@ def calc(exprList):
                 newList[1].append(exprList[1][i])
             i += 1
         exprList = newList
-        print(exprList)
 
     while matchList('*', exprList[0]) or matchList('/', exprList[0]): #check if * or / (2/3)
         exprList = calcProd(exprList)
@@ -251,6 +249,7 @@ def returnNbResult(exprList):
         return charConv(exprList[0][0])
     else:
         raise Exception("Value to return must be a number")
+
     return i
 
 def removeSpace(expr):
@@ -263,7 +262,11 @@ def removeSpace(expr):
         
     return expr2
 
-'''for i in range(255):
+'''
+def mainInput():
+    pass
+
+for i in range(255):
     print('\'' + chr(i) + '\' == ' + parseCharType(chr(i)))
 '''
 
