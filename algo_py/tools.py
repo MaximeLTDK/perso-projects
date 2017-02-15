@@ -30,6 +30,15 @@ def strtolower(str_):
             str2 += str_[i]
     return str2
 
+def strtoupper(str_): #Warning with accents
+    str2 = ""
+    for i in range(len(str_)):
+        if ord(str_[i]) >= 0x61 and ord(str_[i]) <= 0x7A:
+            str2 += chr(ord(str_[i]) - 0x20)
+        else:
+            str2 += str_[i]
+    return str2
+
 def strlen(str_):
     i = 0
     dmp = 0
@@ -39,15 +48,6 @@ def strlen(str_):
             i += 1
         except IndexError: #if out of range, then return
             return i
-
-def strtoupper(str_): #Warning with accents
-    str2 = ""
-    for i in range(len(str_)):
-        if ord(str_[i]) >= 0x61 and ord(str_[i]) <= 0x7A:
-            str2 += chr(ord(str_[i]) - 0x20)
-        else:
-            str2 += str_[i]
-    return str2
 
 def rangeList(car, str_):
     for i in range(len(str_)):
