@@ -106,10 +106,9 @@ def parseCharType(car):
 def calc(exprList):
     while matchList('(', exprList[0]): #check if ( or ) (1/3)
         newList = [[],[]]
-        calcList = [[],[]]
-
         i = 0
         while i < len(exprList[0]): #parenthese parsing
+            calcList = [[],[]]
             if exprList[0][i] == '(':
                 j = 1
                 parnths = 1 #parenthese count
@@ -124,6 +123,7 @@ def calc(exprList):
                 calcList[0].pop() #to remove the last parenthese
                 calcList[1].pop()
                 calcList = calc(calcList)
+                
                 newList[0].append(calcList[0][0])
                 newList[1].append(calcList[1][0])
                 i += j - 1
@@ -132,13 +132,55 @@ def calc(exprList):
                 newList[1].append(exprList[1][i])
             i += 1
         exprList = newList
-
+        
     while matchList('*', exprList[0]) or matchList('/', exprList[0]): #check if * or / (2/3)
         exprList = calcProd(exprList)
 
     exprList = calcSum(exprList) #only + and -, OK (3/3)
     
     return exprList
+
+'''
+def calc_(exprList): #for debugging
+    while matchList('(', exprList[0]): #check if ( or ) (1/3)
+        newList = [[],[]]
+        print("exprList before threating (): " + str(exprList) + "\n")
+        i = 0
+        while i < len(exprList[0]): #parenthese parsing
+            calcList = [[],[]]
+            if exprList[0][i] == '(':
+                j = 1
+                parnths = 1 #parenthese count
+                while i + j < len(exprList[0]) and parnths > 0:
+                    if exprList[0][i + j] == '(':
+                        parnths += 1
+                    elif exprList[0][i + j] == ')':
+                        parnths -= 1
+                    calcList[0].append(exprList[0][i + j])
+                    calcList[1].append(exprList[1][i + j])
+                    j += 1
+                calcList[0].pop() #to remove the last parenthese
+                calcList[1].pop()
+                print("calcList before calc():" + str(calcList) + "\n")
+                calcList = calc(calcList)
+                print("calcList after calc():" + str(calcList) + "\n")
+                newList[0].append(calcList[0][0])
+                newList[1].append(calcList[1][0])
+                i += j - 1
+            else:
+                newList[0].append(exprList[0][i])
+                newList[1].append(exprList[1][i])
+            print("newList step by step: " + str(newList) + "\n")
+            i += 1
+        exprList = newList
+        print("exprList after threating (): " + str(exprList) + "\n")
+    while matchList('*', exprList[0]) or matchList('/', exprList[0]): #check if * or / (2/3)
+        exprList = calcProd(exprList)
+
+    exprList = calcSum(exprList) #only + and -, OK (3/3)
+    
+    return exprList
+    '''
 
 def calcSum(exprList):
     exprMat = []
@@ -242,7 +284,7 @@ for i in range(255):
 '''
 
 
-expr = "56 * (4 + (13 - 7) / 3 + 4) * 2"
+expr = "(5 + 6) * 56 * (4 + (13 - 7) / 3 + 4) * 2"
 
 string = parseString(expr)
 math = parseMath(string)
