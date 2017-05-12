@@ -17,7 +17,8 @@ print(test_parser_calc(" 45 /2+3", 25.5)) #spaces
 print(test_parser_calc("(25+5)", 30)) #simple parenthese
 print(test_parser_calc("((25+5))", 30)) #useless parenthese
 print(test_parser_calc("(25 + 5 * (9-3))", 55)) #imbriqued parentheses
-print(test_parser_calc("(10+34) * (56-23)", 1452)) #double parentheses
+print(test_parser_calc("(10+34) * (56-23)", 1452)) #pair of parentheses
+print(test_parser_calc("(22+22) * (33-25) * ((1156-333) + (987*123))", 43022848)) #parentheses invasion
 print(test_parser_calc("(10+34 * (67 + 5354))", 184324)) #many parentheses (1/2)
 print(test_parser_calc("(10+34 * (67 + 5354)) * (56-23)", 6082692)) #many parentheses (2/2)
 print(test_parser_calc("56 * (4 + (13 - 7) / 3 + 4) * 2", 1120.0)) #kd
