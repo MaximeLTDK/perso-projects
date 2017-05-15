@@ -1,0 +1,6 @@
+H:\prog\vspro\Mille_Bornes\Mille_Bornes\bin\Debug\Mille_Bornes.exe.config
+H:\prog\vspro\Mille_Bornes\Mille_Bornes\obj\Debug\Mille_Bornes.csprojResolveAssemblyReference.cache
+H:\prog\vspro\Mille_Bornes\Mille_Bornes\bin\Debug\Mille_Bornes.exe
+H:\prog\vspro\Mille_Bornes\Mille_Bornes\bin\Debug\Mille_Bornes.pdb
+H:\prog\vspro\Mille_Bornes\Mille_Bornes\obj\Debug\Mille_Bornes.exe
+H:\prog\vspro\Mille_Bornes\Mille_Bornes\obj\Debug\Mille_Bornes.pdb
