@@ -1,6 +1,0 @@
-H:\prog\vspro\Uno\Uno\bin\Debug\Uno.exe.config
-H:\prog\vspro\Uno\Uno\bin\Debug\Uno.exe
-H:\prog\vspro\Uno\Uno\bin\Debug\Uno.pdb
-H:\prog\vspro\Uno\Uno\obj\Debug\Uno.csprojResolveAssemblyReference.cache
-H:\prog\vspro\Uno\Uno\obj\Debug\Uno.exe
-H:\prog\vspro\Uno\Uno\obj\Debug\Uno.pdb
