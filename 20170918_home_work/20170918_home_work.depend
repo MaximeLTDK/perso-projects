@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1506930305 source:d:\prog\cpp\codeblocks\20170918_home_work\math_func.c
+	<stdlib.h>
+	"math_func.h"
+
+1506926672 d:\prog\cpp\codeblocks\20170918_home_work\math_func.h
+
+1506927792 source:d:\prog\cpp\codeblocks\20170918_home_work\main.c
+	<stdlib.h>
+	<stdio.h>
+	"math_func.h"
+
